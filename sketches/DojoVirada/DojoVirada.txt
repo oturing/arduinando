@@ -1,0 +1,16 @@
+1. Fazer um segmento do digito acender em vez do ponto
+
+2. acender todos em sequencia
+
+3. descobrir pino faltante
+
+4. excluir o pino faltante do loop
+
+5. excluir o ponto e o segmento central
+
+6. ler o potenciometro
+
+7. ler o potenciometro antes de piscar o pino
+
+8. trocar o delay com o valor lido do potenciometro
+

@@ -5,10 +5,11 @@
   
  */
 
-const int PRIM_PINO = 6;
-const int ULT_PINO = 12; // nao acender ponto decimal
-const int PULAR_PINO = 9; // nao acender segmento central
+const int PRIM_PINO = 5;
+const int PINO_RUIM = 8;
+const int ULT_PINO = 11; // nao piscar ponto nem centro
 const int POTENCIOMETRO = A0;
+const int DELAY = 200;
 int pino_ativo = PRIM_PINO;
 int pot = 0; // valor lido do potenciometro
 
@@ -21,11 +22,13 @@ void setup() {
 
 void loop() {
   pot = analogRead(POTENCIOMETRO);
+  Serial.println(pot);
   digitalWrite(pino_ativo, HIGH);   
   delay(pot);              
   digitalWrite(pino_ativo, LOW);  
   pino_ativo++;
-  if (pino_ativo == PULAR_PINO) pino_ativo++;
+  if (pino_ativo == PINO_RUIM) 
+     pino_ativo++;
   if (pino_ativo > (ULT_PINO)) { 
     pino_ativo = PRIM_PINO;  
   }
