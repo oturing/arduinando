@@ -175,11 +175,9 @@ void loop(void) {
 // https://github.com/adafruit/Adafruit_NFCShield_I2C/blob/master/Adafruit_NFCShield_I2C.cpp
 // function: Adafruit_NFCShield_I2C::PrintHex
 
-void lcd_print_hex(const byte * data, const uint32_t numBytes)
-{
+void lcd_print_hex(const byte * data, const uint32_t numBytes) {
   uint32_t szPos;
-  for (szPos=0; szPos < numBytes; szPos++) 
-  {
+  for (szPos=0; szPos < numBytes; szPos++) {
     // Append leading 0 for small values
     if (data[szPos] <= 0xF)
       lcd.print("0");
