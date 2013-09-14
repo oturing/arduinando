@@ -1,0 +1,4 @@
+#!/bin/bash
+clear; echo `basename $1 .c`
+gcc -Wall -ansi -pedantic -O2 -FORTIFY_SOURCE $1 -o `basename $1 .c`
+#gcc -Wall -ansi -pedantic -O2 -o $1 `basename $1 .c`
